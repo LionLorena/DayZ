@@ -1,5 +1,6 @@
 ﻿language: java
 install: gradle setupCIWorkspace
+script: gradle build
 branches:
   only:
     - travis
