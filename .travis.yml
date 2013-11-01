@@ -1,0 +1,11 @@
+﻿language: java
+install: gradle setupCIWorkspace
+branches:
+  only:
+    - travis
+env:
+  global:
+    - "FTP_USER=g5jix5vKTnu3eLJjcszRXHc14URBRPfkmo1QmMlfY7Agi044eK4eMYmi+nUER+gUoJYi7FNU8aTnZK1K8mdd/u4lMuyjcfH0JDzGiIuQqOgc7jps1PRgz/FGcFhAMaICzXtbI6bs8rYeaaqfUjqPtdYjEW89GXt1QQ3IkcK5RWA="
+    - "FTP_PASSWORD=TIzgBM7gYXVQ11sytbwbo4QDBE+bB7Vpz8Zoyp34cvGsGE5tmO750bSwq440Qbso7/KQG3iC/PJe/4sR7CMHQjad5R5M5EP0efCMjSge9kMySeyLIfYchv9GmS9wBGENQw9JcwAos7NDOjuL7dAeFpD1tg1NO87ehdl+XqBQZXE="
+after_success:
+    "wget -r ftp.dayzminecraft.x10.mx --user $FTP_USER --password $FTP_PASSWORD"
